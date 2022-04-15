@@ -64,8 +64,9 @@ Parascript Last + 2300 Names|67.0%|51.9%|38.0%|10.1%|0.0%|89.9%|48.1%| 21%|2.8
 ## Configure your Project
 
 ## Test your Golden Files
-Add the following script to the  Project level script.
-You will also need to add the functions [String_LevenshteinDistance](https://github.com/KofaxTransformation/KTScripts/blob/a08c90037fc4d0cc200722557c3ecaab27a2ab4a/FuzzyMatch.vb#L24) and [FileName_WithoutPath](https://github.com/KofaxTransformation/KTScripts/blob/a08c90037fc4d0cc200722557c3ecaab27a2ab4a/File%20System.vb#L80)
+1. Add the following script to the  Project level script.
+*You will also need to add the functions [String_LevenshteinDistance](https://github.com/KofaxTransformation/KTScripts/blob/a08c90037fc4d0cc200722557c3ecaab27a2ab4a/FuzzyMatch.vb#L24) and [FileName_WithoutPath](https://github.com/KofaxTransformation/KTScripts/blob/a08c90037fc4d0cc200722557c3ecaab27a2ab4a/File%20System.vb#L80)  
+The event  **Document_AfterProcess** is called after the locators have run and **after** the fields have been both formatted and validated - this is important because we are looking at the **valid** value on each field.*
 ```vb
 Private Sub Document_AfterProcess(ByVal pXDoc As CASCADELib.CscXDocument)
    Dim F As Long, Field As CscXDocField, TruthDoc As New CscXDocument, Truth As CscXDocField
@@ -85,8 +86,15 @@ Private Sub Document_AfterProcess(ByVal pXDoc As CASCADELib.CscXDocument)
    Close #1
 End Sub
 ```
+2. Configure your locators and profiles however you like. My recommendation is to only change one value at a time and then run the Optimizer - in this way you will see what every checkbox, radio button and value has on your project. 
+3. Select all of your documents (CTRL-A) in the Test Window.
+4. Go to **Visual Studio Code** and delete the contents of file (CTRL-A, Delete) and then save it (CTRL-S).
+5. Run "Extact Docmuents" (F6) to test all of your documents.
+*while the documents are being extracted you can view the live updates results file in **Visual Studio Code** l
 ## Copy data to Excel
-
+1. When Extraction has finished, copy the data from the output file (CTRL-A, CTRL-C).
+2. Duplicate the Worksheet in the Excel Document. Rename it. Paste data into A7 (CTRL-V).
+3. Add your data to the Summary page by just changing the reference of the cell in column A to point to the first cell in your new Worksheet.
 
 
 
