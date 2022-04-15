@@ -65,7 +65,7 @@ Parascript Last + 2300 Names|67.0%|51.9%|38.0%|10.1%|0.0%|89.9%|48.1%| 21%|2.8
 
 ## Test your Golden Files
 Add the following script to the  Project level script.
-You will also need to add the functions [String_LevenshteinDistance](https://github.com/KofaxTransformation/KTScripts/blob/a08c90037fc4d0cc200722557c3ecaab27a2ab4a/FuzzyMatch.vb#L24) and [FileName_WithoutPath](https://github.com/KofaxTransformation/KTScripts/blob/a08c90037fc4d0cc200722557c3ecaab27a2ab4a/File%20System.vb#L68)
+You will also need to add the functions [String_LevenshteinDistance](https://github.com/KofaxTransformation/KTScripts/blob/a08c90037fc4d0cc200722557c3ecaab27a2ab4a/FuzzyMatch.vb#L24) and [FileName_WithoutPath](https://github.com/KofaxTransformation/KTScripts/blob/a08c90037fc4d0cc200722557c3ecaab27a2ab4a/File%20System.vb#L80)
 ```vb
 Private Sub Document_AfterProcess(ByVal pXDoc As CASCADELib.CscXDocument)
    Dim F As Long, Field As CscXDocField, TruthDoc As New CscXDocument, Truth As CscXDocField
