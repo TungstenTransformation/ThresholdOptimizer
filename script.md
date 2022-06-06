@@ -1,5 +1,5 @@
 ## Find the largest width and the largest height from all fields in a group of documents
-this runs in a script locator on any document. It works in KTA because it loops through all the xdocs in the same folder as the xdoc being tested.
+this runs in a script locator on any document. It works in KTA Transformation Designer by pressing F7 on any document, because it loops through all the xdocs in the same folder as the xdoc being tested.
 
 ```
 Private Sub SL_Dim_LocateAlternatives(ByVal pXDoc As CASCADELib.CscXDocument, ByVal pLocator As CASCADELib.CscXDocField)
