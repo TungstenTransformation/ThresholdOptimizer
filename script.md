@@ -110,6 +110,27 @@ These results contain errors, but we can see the correct text in the file name.
 The following script will replace the OCR text with the correct text from the filename and set the confidence to 100%.  
 Here you can see a wrong OCR result with confidence of 54% in the **Extraction Results** Window.  
 ![image](https://user-images.githubusercontent.com/103566874/172140798-406dd3e2-8589-45bd-a89f-cc3a13174f45.png)  
+I added this script to the document class  
+```vb
+Private Sub Document_AfterExtract(ByVal pXDoc As CASCADELib.CscXDocument)
+   Dim Filename As String, Field As CscXDocField
+   Set Field=pXDoc.Fields.ItemByName("Name")
+   Filename = Mid(pXDoc.FileName,InStrRev(pXDoc.FileName,"\")+1) ' the filename is everything after the last backslash
+   Field.Text=Left(Filename,InStr(Filename,"_")-1)  ' True field value is everything left of _ in the file name
+   Field.Confidence=1.00 ' confidence = 100%
+   Field.ExtractionConfident=True
+End Sub
+```
+and re-extracted everything (CTRL-A, F7) and now every document is perfect!  
+![image](https://user-images.githubusercontent.com/103566874/172142199-51a1a76c-7a49-484c-ba39-dbd8be97e14d.png)  
+Note the green check mark **ExtractionConfident=true** and confidence =100%  
+![image](https://user-images.githubusercontent.com/103566874/172142240-9c1060f4-71c2-43c8-a173-e8400cf1ca9e.png)  
+I saved all the documents   
+![image](https://user-images.githubusercontent.com/103566874/172142383-064d6537-6695-4233-84a9-cb55aab8d26b.png)  
+and made a backup of the folder containing this perfect truth (Because it is so easily to mess this up and lose it all!)  
+![image](https://user-images.githubusercontent.com/103566874/172142510-4caf7fb2-0de5-4ac0-8451-1751b28ebf90.png)
+
+I ran a normal benchmark.
 
 
 
