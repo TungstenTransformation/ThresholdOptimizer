@@ -130,7 +130,16 @@ I saved all the documents
 and made a backup of the folder containing this perfect truth (Because it is so easily to mess this up and lose it all!)  
 ![image](https://user-images.githubusercontent.com/103566874/172142510-4caf7fb2-0de5-4ac0-8451-1751b28ebf90.png)
 
-I ran a normal benchmark.
+# Run a normal Extraction Benchmark
+I Right-clicked on the test set and selected **Use as Benchmark Set**.  
+![image](https://user-images.githubusercontent.com/103566874/172143077-287da2ca-d518-496c-918e-08d3b0886da8.png)  
+![image](https://user-images.githubusercontent.com/103566874/172143142-1196fa41-9a74-418c-af66-20c491c853aa.png)  
+I ran the **Extraction Benchmark** from the **Process** Menu.  
+![image](https://user-images.githubusercontent.com/103566874/172143454-7ac5d4c2-8a68-407c-a7b3-f9bbd73e1ea5.png)  
+Now I am ready to run the [Threshold Optimizer](readme.md)!
+
+ 
+
 
 
 
