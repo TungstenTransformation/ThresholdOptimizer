@@ -1,3 +1,6 @@
+# Anonymizing Zones
+With the steps below I copied zones out of sensitive documents into their own documents and deleted the more unusual names. This leaves me with documents only containing first or last names - the documents are sorted alphabetically so the link between first anem and last name is broken.
+
 ## Find the largest width and the largest height from all fields in a group of documents
 My documents have zones of all different sizes and locations all over the documents. I manually created the zones. Now I want to chop all of these zones out of the documents and make new documents all of exactly the same size with a zone size that is big enough to read ALL of these zones.  
 This runs in a script locator on any document. It works in KTA Transformation Designer by pressing F7 on any document, because it loops through all the xdocs in the same folder as the xdoc being tested.  
@@ -116,27 +119,41 @@ Private Sub Document_AfterExtract(ByVal pXDoc As CASCADELib.CscXDocument)
    Dim Filename As String, Field As CscXDocField
    Set Field=pXDoc.Fields.ItemByName("Name")
    Filename = Mid(pXDoc.FileName,InStrRev(pXDoc.FileName,"\")+1) ' the filename is everything after the last backslash
-   Field.Text=Left(Filename,InStr(Filename,"_")-1)  ' True field value is everything left of _ in the file name
+   Field.Text=UCase(Left(Filename,InStr(Filename,"_")-1))  ' True field value is everything left of _ in the file name
    Field.Confidence=1.00 ' confidence = 100%
    Field.ExtractionConfident=True 'Make the green check mark in the Extraction Results Window
 End Sub
 ```
 and re-extracted everything (CTRL-A, F7) and now every document is perfect!  
-![image](https://user-images.githubusercontent.com/103566874/172142199-51a1a76c-7a49-484c-ba39-dbd8be97e14d.png)  
+![image](https://user-images.githubusercontent.com/103566874/172145235-870fd862-ff1b-4895-865b-952e13a2e400.png)  
 Note the green check mark **ExtractionConfident=true** and confidence =100%  
-![image](https://user-images.githubusercontent.com/103566874/172142240-9c1060f4-71c2-43c8-a173-e8400cf1ca9e.png)  
+![image](https://user-images.githubusercontent.com/103566874/172145297-c6c9fce5-14fe-4e0b-af90-da741a1d5ea1.png)  
 I saved all the documents   
-![image](https://user-images.githubusercontent.com/103566874/172142383-064d6537-6695-4233-84a9-cb55aab8d26b.png)  
+![image](https://user-images.githubusercontent.com/103566874/172145368-61d6e9f1-99cf-417b-bf76-dde505f70dd0.png)  
 and made a backup of the folder containing this perfect truth (Because it is so easily to mess this up and lose it all!)  
 ![image](https://user-images.githubusercontent.com/103566874/172142510-4caf7fb2-0de5-4ac0-8451-1751b28ebf90.png)
+
+remove this script before continuing, otherwise the benchmark will look perfect 😊.  
+
 
 # Run a normal Extraction Benchmark
 I Right-clicked on the test set and selected **Use as Benchmark Set**.  
 ![image](https://user-images.githubusercontent.com/103566874/172143077-287da2ca-d518-496c-918e-08d3b0886da8.png)  
 ![image](https://user-images.githubusercontent.com/103566874/172143142-1196fa41-9a74-418c-af66-20c491c853aa.png)  
-I ran the **Extraction Benchmark** from the **Process** Menu.  
+I have 425 documents and the benchmark takes longer than 1 minute to run, so I made a tiny test set so that I can test that the benchmark is working correctly becfore I run the full thing!  I created a **Document Subset** called **small**.  
+![image](https://user-images.githubusercontent.com/103566874/172145875-77501a33-2db3-4dfe-99c0-4df71fc0a13e.png)  
+I dragged a few documents into the **small** subset  
+![image](https://user-images.githubusercontent.com/103566874/172146644-ff7a0ab9-96f0-4e6e-ba93-e969269d13c0.png)  
+I set the **small** subset to be the **Default Document Subset**
+![image](https://user-images.githubusercontent.com/103566874/172146722-df7b5832-a1a4-491e-ae95-a33cc19de765.png)  
+and saved the Benchmark Set.  
+![image](https://user-images.githubusercontent.com/103566874/172146880-9d55a6c1-1b23-418d-bc1d-90bb70eb14ee.png)  
+
+I ran **Extraction Benchmark** from the **Process** Menu on this tiny set of 6 documents.  
 ![image](https://user-images.githubusercontent.com/103566874/172143454-7ac5d4c2-8a68-407c-a7b3-f9bbd73e1ea5.png)  
-Now I am ready to run the [Threshold Optimizer](readme.md)!
+In the results I see that I don't have optimal results. I would like to know what the best choice is for the confidence threshold, which defaulted to 80%.  
+
+Now I am ready to run the [Threshold Optimizer](readme.md) to find the best threshold value!
 
  
 
