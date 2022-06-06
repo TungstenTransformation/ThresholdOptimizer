@@ -153,7 +153,7 @@ I ran **Extraction Benchmark** from the **Process** Menu on this tiny set of 6 d
 ![image](https://user-images.githubusercontent.com/103566874/172147171-0f383dce-1f9b-46f2-bcc3-6a140facdb63.png)  
 In the results I see that I don't have optimal results. I would like to know what the best choice is for the confidence threshold, which is defaulted to 80%.  
 ![image](https://user-images.githubusercontent.com/103566874/172147320-b8097a4a-d5b4-4363-8764-6579dc6bc00a.png)  
-Now I am ready to run the [Threshold Optimizer](readme.md) to find the best threshold value!
+Now I am ready to run the [Threshold Optimizer](README.md) to find the best threshold value!
 
  
 
