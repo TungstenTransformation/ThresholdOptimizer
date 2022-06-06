@@ -1,6 +1,6 @@
 # Step by Step Guide.
-This guide will show you how to run the Threshold Optimizer. You will first need to have a projec that can run the Extract Benchmark successfully.  
-See [Anonymizing Zones from Documents.md](Anonymizing%20Zones%20from%20Documents.md) for an example.  
+This guide will show you how to run the Threshold Optimizer. You will first need to have a project that can run the **Extraction Benchmark** successfully.  
+See [Anonymizing Zones from Documents.md](Anonymizing%20Zones%20from%20Documents.md) for an example of how to configure the Extraction Benchmark.  
 ![image](https://user-images.githubusercontent.com/103566874/172147968-30214ab7-84df-434b-b434-a53b3ada4247.png)  
 
 ## Configure the Threshold Optimizer
