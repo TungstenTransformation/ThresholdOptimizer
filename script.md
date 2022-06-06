@@ -104,11 +104,11 @@ I then extracted all of the documents (CTRL-A, F7)
 I added the **Name** field the the **Details**  
 ![image](https://user-images.githubusercontent.com/103566874/172140552-8c9ed306-9ca4-4a5c-9187-b53afc19ba28.png)  
 and can now see all the OCR results with the documents  
-![image](https://user-images.githubusercontent.com/103566874/172140617-53a87492-a310-49ac-ad97-6367e358dc0b.png)  
+![image](https://user-images.githubusercontent.com/103566874/172140961-5a0c4219-68ff-46d6-b0ab-83ddbfcbb433.png)  
 
 These results contain errors, but we can see the correct text in the file name.
 The following script will replace the OCR text with the correct text from the filename and set the confidence to 100%.  
-Here you can see a wrong OCR result with confidence of 54%  
+Here you can see a wrong OCR result with confidence of 54% in the **Extraction Results** Window.  
 ![image](https://user-images.githubusercontent.com/103566874/172140798-406dd3e2-8589-45bd-a89f-cc3a13174f45.png)  
 
 
