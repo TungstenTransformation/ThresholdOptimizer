@@ -5,7 +5,7 @@ See [Anonymizing Zones from Documents.md](Anonymizing%20Zones%20from%20Documents
 
 ## Configure the Threshold Optimizer
 1. Add the following script to the  Project level script.
-*You will also need to add the functions [String_LevenshteinDistance/Min/Max](https://github.com/KofaxTransformation/KTScripts/blob/a08c90037fc4d0cc200722557c3ecaab27a2ab4a/FuzzyMatch.vb#L24) and [FileName_WithoutPath](https://github.com/KofaxTransformation/KTScripts/blob/a08c90037fc4d0cc200722557c3ecaab27a2ab4a/File%20System.vb#L80)  
+*You will also need to add the functions [String_LevenshteinDistance/Min/Max](https://github.com/KofaxTransformation/KTScripts/blob/5f0141f7a1aac5d439f46074b54df956827f1cb8/FuzzyMatch.vb#L24) and [FileName_WithoutPath](https://github.com/KofaxTransformation/KTScripts/blob/a08c90037fc4d0cc200722557c3ecaab27a2ab4a/File%20System.vb#L80)  
 The event  **Document_AfterProcess** is called after the locators have run and **after** the fields have been both formatted and validated - this is important because we are looking at the **valid** value on each field.*
 ```vb
 '#Language "WWB-COM"
