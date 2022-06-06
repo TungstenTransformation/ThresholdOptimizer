@@ -106,11 +106,11 @@ I added the **Name** field the the **Details**
 and can now see all the OCR results with the documents  
 ![image](https://user-images.githubusercontent.com/103566874/172140961-5a0c4219-68ff-46d6-b0ab-83ddbfcbb433.png)  
 
-These results contain errors, but we can see the correct text in the file name.
-The following script will replace the OCR text with the correct text from the filename and set the confidence to 100%.  
 Here you can see a wrong OCR result with confidence of 54% in the **Extraction Results** Window.  
 ![image](https://user-images.githubusercontent.com/103566874/172140798-406dd3e2-8589-45bd-a89f-cc3a13174f45.png)  
-I added this script to the document class  
+These results contain errors, but we can see the correct text in the file name.
+The following script in the document class will replace the OCR text with the correct text from the filename and set the confidence to 100%.  
+
 ```vb
 Private Sub Document_AfterExtract(ByVal pXDoc As CASCADELib.CscXDocument)
    Dim Filename As String, Field As CscXDocField
@@ -118,7 +118,7 @@ Private Sub Document_AfterExtract(ByVal pXDoc As CASCADELib.CscXDocument)
    Filename = Mid(pXDoc.FileName,InStrRev(pXDoc.FileName,"\")+1) ' the filename is everything after the last backslash
    Field.Text=Left(Filename,InStr(Filename,"_")-1)  ' True field value is everything left of _ in the file name
    Field.Confidence=1.00 ' confidence = 100%
-   Field.ExtractionConfident=True
+   Field.ExtractionConfident=True 'Make the green check mark in the Extraction Results Window
 End Sub
 ```
 and re-extracted everything (CTRL-A, F7) and now every document is perfect!  
