@@ -150,9 +150,9 @@ and saved the Benchmark Set.
 ![image](https://user-images.githubusercontent.com/103566874/172146880-9d55a6c1-1b23-418d-bc1d-90bb70eb14ee.png)  
 
 I ran **Extraction Benchmark** from the **Process** Menu on this tiny set of 6 documents.  
-![image](https://user-images.githubusercontent.com/103566874/172143454-7ac5d4c2-8a68-407c-a7b3-f9bbd73e1ea5.png)  
-In the results I see that I don't have optimal results. I would like to know what the best choice is for the confidence threshold, which defaulted to 80%.  
-
+![image](https://user-images.githubusercontent.com/103566874/172147171-0f383dce-1f9b-46f2-bcc3-6a140facdb63.png)  
+In the results I see that I don't have optimal results. I would like to know what the best choice is for the confidence threshold, which is defaulted to 80%.  
+![image](https://user-images.githubusercontent.com/103566874/172147320-b8097a4a-d5b4-4363-8764-6579dc6bc00a.png)  
 Now I am ready to run the [Threshold Optimizer](readme.md) to find the best threshold value!
 
  
