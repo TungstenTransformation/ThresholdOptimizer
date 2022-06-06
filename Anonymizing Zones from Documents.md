@@ -144,7 +144,7 @@ I have 425 documents and the benchmark takes longer than 1 minute to run, so I m
 ![image](https://user-images.githubusercontent.com/103566874/172145875-77501a33-2db3-4dfe-99c0-4df71fc0a13e.png)  
 I dragged a few documents into the **small** subset  
 ![image](https://user-images.githubusercontent.com/103566874/172146644-ff7a0ab9-96f0-4e6e-ba93-e969269d13c0.png)  
-I set the **small** subset to be the **Default Document Subset**
+I set the **small** subset to be the **Default Document Subset**  
 ![image](https://user-images.githubusercontent.com/103566874/172146722-df7b5832-a1a4-491e-ae95-a33cc19de765.png)  
 and saved the Benchmark Set.  
 ![image](https://user-images.githubusercontent.com/103566874/172146880-9d55a6c1-1b23-418d-bc1d-90bb70eb14ee.png)  
