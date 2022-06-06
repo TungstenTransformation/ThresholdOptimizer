@@ -102,9 +102,9 @@ I added an Advanced Zone Locator (AZL) to the project. Gave it the first image a
 ![image](https://user-images.githubusercontent.com/103566874/172140066-6382494c-9623-4656-abf3-b5ed4b4fb7dc.png)  
 I then extracted all of the documents (CTRL-A, F7)  
 I added the **Name** field the the **Details**  
-![image](https://user-images.githubusercontent.com/103566874/172140552-8c9ed306-9ca4-4a5c-9187-b53afc19ba28.png)
+![image](https://user-images.githubusercontent.com/103566874/172140552-8c9ed306-9ca4-4a5c-9187-b53afc19ba28.png)  
 and can now see all the OCR results with the documents  
-![image](https://user-images.githubusercontent.com/103566874/172140617-53a87492-a310-49ac-ad97-6367e358dc0b.png)
+![image](https://user-images.githubusercontent.com/103566874/172140617-53a87492-a310-49ac-ad97-6367e358dc0b.png)  
 
 These results contain errors, but we can see the correct text in the file name.
 The following script will replace the OCR text with the correct text from the filename and set the confidence to 100%.  
