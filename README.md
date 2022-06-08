@@ -1,4 +1,6 @@
 # Field Confidence Threshold Optimizer Tool
+[[video](https://kofax.app.bigtincan.com/pfiles/w2kZv90yNLODdMVXA819iyhVcWtxCmCk8zPjG35nramlRpWeoY/f/1039908450)] [[presentation](https://kofax.app.bigtincan.com/pfiles/w2kZv90yNLODdMVXA819iyhVcWtxCmCk8zPjG35nramlRpWeoY/f/1039908451)]  
+
 Kofax Transformation defaults to 80% as the default field confidence threshold. Finding the optimum threshold for each field is a tedious task.  
 This tool
 * visualizes true/false positives/negatives for thresholds 0%,5%,10%,15%,...90%,95% and 100%
